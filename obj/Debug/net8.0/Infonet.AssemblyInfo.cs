@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Infonet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c1b594b86ed1171f13e9de0e4daa38583fa96ab4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Infonet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Infonet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
