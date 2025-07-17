@@ -153,8 +153,6 @@ Invoke-RestMethod http://localhost:5000/
 
 ---
 
-## ✅ Submission Ready
-
 This implementation:
 
 * Fully satisfies all functional and validation requirements in the assignment
@@ -163,4 +161,4 @@ This implementation:
 * Provides manual testability and minimal runtime dependencies
 * Respects all constraints and expectations outlined in the prompt
 
-> ✅ Built for Infonetica Software Engineer Intern Take-Home Assignment
+
