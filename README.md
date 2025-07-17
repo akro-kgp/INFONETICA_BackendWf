@@ -163,7 +163,7 @@ This implementation:
 
 ---
 
-🖥️ End‑to‑End Sample Session (wf2)
+## 🖥️ End‑to‑End Sample Session (wf2)
 Below is a full proof‑of‑work session for a second workflow (wf2) captured from PowerShell. This demonstrates definition creation, instance lifecycle, and final state verification.
 # 1. Create wf2 definition
 $body2 = '{
