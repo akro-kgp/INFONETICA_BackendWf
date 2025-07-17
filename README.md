@@ -161,4 +161,45 @@ This implementation:
 * Provides manual testability and minimal runtime dependencies
 * Respects all constraints and expectations outlined in the prompt
 
+---
+
+🖥️ End‑to‑End Sample Session (wf2)
+Below is a full proof‑of‑work session for a second workflow (wf2) captured from PowerShell. This demonstrates definition creation, instance lifecycle, and final state verification.
+# 1. Create wf2 definition
+$body2 = '{
+  "id":"wf2",
+  "states":[
+    {"id":"todo","name":"To Do","isInitial":true,"isFinal":false},
+    {"id":"inprogress","name":"In Progress","isInitial":false,"isFinal":false},
+    {"id":"done","name":"Done","isInitial":false,"isFinal":true}
+  ],
+  "actions":[
+    {"id":"start","name":"Start Task","fromStates":["todo"],"toState":"inprogress"},
+    {"id":"finish","name":"Finish Task","fromStates":["inprogress"],"toState":"done"}
+  ]
+}'
+Invoke-RestMethod -Uri http://localhost:5000/workflow-definitions -Method Post -Body $body2 -ContentType 'application/json'
+
+# 2. Start instance of wf2
+$inst2 = Invoke-RestMethod -Uri "http://localhost:5000/workflow-instances?definitionId=wf2" -Method Post
+$inst2.id  # sample: f10d7e6e-4f8d-4286-aa8f-57a2940d4c09
+
+# 3. Move todo -> inprogress
+Invoke-RestMethod -Uri "http://localhost:5000/workflow-instances/$($inst2.id)/actions/start" -Method Post
+
+# 4. Move inprogress -> done
+Invoke-RestMethod -Uri "http://localhost:5000/workflow-instances/$($inst2.id)/actions/finish" -Method Post
+
+# 5. Verify final state & history
+Invoke-RestMethod -Uri "http://localhost:5000/workflow-instances/$($inst2.id)" | Format-List *
+
+Sample final output:
+id             : f10d7e6e-4f8d-4286-aa8f-57a2940d4c09
+definitionId   : wf2
+currentStateId : done
+history        : {@{actionId=start;  timestamp=...}, @{actionId=finish; timestamp=...}}
+
+
+---
+
 
