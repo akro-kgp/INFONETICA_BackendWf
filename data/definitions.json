@@ -1,0 +1,78 @@
+{
+  "wf1": {
+    "Id": "wf1",
+    "States": [
+      {
+        "Id": "start",
+        "Name": "Start",
+        "IsInitial": true,
+        "IsFinal": false,
+        "Enabled": true
+      },
+      {
+        "Id": "done",
+        "Name": "Done",
+        "IsInitial": false,
+        "IsFinal": true,
+        "Enabled": true
+      }
+    ],
+    "Actions": [
+      {
+        "Id": "finish",
+        "Name": "Finish",
+        "Enabled": true,
+        "FromStates": [
+          "start"
+        ],
+        "ToState": "done"
+      }
+    ]
+  },
+  "wf2": {
+    "Id": "wf2",
+    "States": [
+      {
+        "Id": "todo",
+        "Name": "To Do",
+        "IsInitial": true,
+        "IsFinal": false,
+        "Enabled": true
+      },
+      {
+        "Id": "inprogress",
+        "Name": "In Progress",
+        "IsInitial": false,
+        "IsFinal": false,
+        "Enabled": true
+      },
+      {
+        "Id": "done",
+        "Name": "Done",
+        "IsInitial": false,
+        "IsFinal": true,
+        "Enabled": true
+      }
+    ],
+    "Actions": [
+      {
+        "Id": "start",
+        "Name": "Start Task",
+        "Enabled": true,
+        "FromStates": [
+          "todo"
+        ],
+        "ToState": "inprogress"
+      },
+      {
+        "Id": "finish",
+        "Name": "Finish Task",
+        "Enabled": true,
+        "FromStates": [
+          "inprogress"
+        ],
+        "ToState": "done"
+      }
+    ]
+  }
+}

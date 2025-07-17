@@ -1,0 +1,39 @@
+{
+  "aa04ed35-0e21-4226-ba88-8e63fa650df6": {
+    "Id": "aa04ed35-0e21-4226-ba88-8e63fa650df6",
+    "DefinitionId": "wf1",
+    "CurrentStateId": "done",
+    "History": [
+      {
+        "ActionId": "finish",
+        "Timestamp": "2025-07-17T18:24:43.2982677Z"
+      }
+    ]
+  },
+  "e6c86d92-675b-459f-9868-8e98fa2d7d8e": {
+    "Id": "e6c86d92-675b-459f-9868-8e98fa2d7d8e",
+    "DefinitionId": "wf1",
+    "CurrentStateId": "done",
+    "History": [
+      {
+        "ActionId": "finish",
+        "Timestamp": "2025-07-17T18:25:44.1256117Z"
+      }
+    ]
+  },
+  "f10d7e6e-4f8d-4286-aa8f-57a2940d4c09": {
+    "Id": "f10d7e6e-4f8d-4286-aa8f-57a2940d4c09",
+    "DefinitionId": "wf2",
+    "CurrentStateId": "done",
+    "History": [
+      {
+        "ActionId": "start",
+        "Timestamp": "2025-07-17T19:05:29.005103Z"
+      },
+      {
+        "ActionId": "finish",
+        "Timestamp": "2025-07-17T19:05:40.0392556Z"
+      }
+    ]
+  }
+}

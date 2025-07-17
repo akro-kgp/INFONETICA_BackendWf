@@ -1,0 +1,32 @@
+{
+  "wf1": {
+    "Id": "wf1",
+    "States": [
+      {
+        "Id": "start",
+        "Name": "Start",
+        "IsInitial": true,
+        "IsFinal": false,
+        "Enabled": true
+      },
+      {
+        "Id": "done",
+        "Name": "Done",
+        "IsInitial": false,
+        "IsFinal": true,
+        "Enabled": true
+      }
+    ],
+    "Actions": [
+      {
+        "Id": "finish",
+        "Name": "Finish",
+        "Enabled": true,
+        "FromStates": [
+          "start"
+        ],
+        "ToState": "done"
+      }
+    ]
+  }
+}
